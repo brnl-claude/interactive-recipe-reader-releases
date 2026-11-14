@@ -1,0 +1,143 @@
+{
+  "repo": {
+    "timestamp": 1794656340000,
+    "version": 20002,
+    "name": "Recipes",
+    "icon": "icon.png",
+    "address": "https://brnl-claude.github.io/interactive-recipe-reader-releases/fdroid/repo",
+    "description": "The Android app for the Interactive Recipe Reader."
+  },
+  "requests": {
+    "install": [],
+    "uninstall": []
+  },
+  "apps": [
+    {
+      "authorName": "Bram",
+      "categories": [
+        "Reading"
+      ],
+      "suggestedVersionCode": "42",
+      "description": "The Android app for the Interactive Recipe Reader, which turns recipes into clear steps with\nthe ingredients highlighted and a timer for each step.\n\n* Opens recipe links from other apps and the browser\n* Scans invite and login QR codes\n* Adds scheduled recipes to the calendar\n* Keeps the screen on while you cook\n\nThe app shows the reader's server, so new features mostly arrive without an update.",
+      "license": "Proprietary",
+      "name": "Recipes",
+      "sourceCode": "https://github.com/brnl-claude/interactive-recipe-reader",
+      "summary": "Cook from clear steps with timers, from the Interactive Recipe Reader",
+      "added": 1794656340000,
+      "packageName": "net.cloud64.recipes",
+      "lastUpdated": 1794656340000
+    }
+  ],
+  "packages": {
+    "net.cloud64.recipes": [
+      {
+        "added": 1794656340000,
+        "apkName": "recipes-v1.6.1.apk",
+        "hash": "fe3a8c0155870b675644ee4f0972f5a9731ab11d761e75d02533519589b4a5cb",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "packageName": "net.cloud64.recipes",
+        "sig": "9fce316eb20e0a60563032a3cc9df9d1",
+        "signer": "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da",
+        "size": 880220,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 42,
+        "versionName": "v1.6.1"
+      },
+      {
+        "added": 1794656340000,
+        "apkName": "recipes-v1.6.0.apk",
+        "hash": "1cba689dee00e20325f879c59aefd6bcd4d6a011b20194aec245d906feef3ea0",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "packageName": "net.cloud64.recipes",
+        "sig": "9fce316eb20e0a60563032a3cc9df9d1",
+        "signer": "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da",
+        "size": 880184,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 39,
+        "versionName": "v1.6.0"
+      },
+      {
+        "added": 1794656340000,
+        "apkName": "recipes-v1.5.0.apk",
+        "hash": "c1e8819dce05b7d2cc055368163963745157031e545280127b6907af3f11ec40",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "packageName": "net.cloud64.recipes",
+        "sig": "9fce316eb20e0a60563032a3cc9df9d1",
+        "signer": "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da",
+        "size": 879856,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 36,
+        "versionName": "v1.5.0"
+      }
+    ]
+  }
+}

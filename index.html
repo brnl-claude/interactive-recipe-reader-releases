@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipes for Android</title>
+<meta name="description" content="Install and update the Recipes app with Obtainium.">
+<link rel="icon" href="icon.png">
+<style>
+  /* Everything is in this folder: no fonts, scripts or images from elsewhere. qrcode.js is
+     qrcode-generator 2.0.4 by Kazuhiko Arase (MIT), the same library the web app uses. */
+  :root {
+    --bg: #f5f8f5;
+    --surface: #ffffff;
+    --text: #17211a;
+    --muted: #56645a;
+    --line: #dde5df;
+    --accent: #2f6b3a;
+    --on-accent: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101511;
+      --surface: #18201a;
+      --text: #e6eee8;
+      --muted: #9aab9f;
+      --line: #27332a;
+      --accent: #7cc68b;
+      --on-accent: #0b160e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header img { width: 64px; height: 64px; border-radius: 16px; }
+  h1 { margin: 0; font-size: 1.7rem; line-height: 1.2; }
+  header p { margin: 2px 0 0; color: var(--muted); }
+  section {
+    margin-top: 24px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  h2 { margin: 0 0 6px; font-size: 1.15rem; }
+  p { margin: 0 0 10px; }
+  .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn.plain { background: none; color: var(--accent); border: 1px solid var(--accent); }
+  button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 10px; }
+  section:target { outline: 2px solid var(--accent); outline-offset: 2px; }
+  dialog {
+    width: min(360px, calc(100vw - 32px));
+    padding: 0;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    text-align: center;
+  }
+  dialog > div { padding: 20px; }
+  dialog::backdrop { background: rgb(0 0 0 / 0.5); }
+  dialog h2 { margin-bottom: 12px; }
+  /* Dark squares on white in both themes, since that is what scanners read best. */
+  #qr-code { display: block; width: 100%; height: auto; background: #fff; border-radius: 8px; }
+  dialog p { margin: 12px 0 16px; }
+  code { overflow-wrap: anywhere; font-size: 0.9rem; }
+  .muted { color: var(--muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="">
+    <div>
+      <h1>Recipes for Android</h1>
+      <p>The app for the Interactive Recipe Reader.</p>
+    </div>
+  </header>
+
+  <section id="obtainium">
+    <h2>Obtainium</h2>
+    <p>Tap the button on the device with Obtainium installed and confirm the import. Obtainium then
+      tells you when there is an update.</p>
+    <p class="row">
+      <a class="btn" id="obtainium-link" href="#">Add to Obtainium</a>
+      <button type="button" class="btn plain" id="obtainium-qr">Show QR code</button>
+    </p>
+    <p class="muted">An app installed by hand updates in place, as long as it has the release key.</p>
+  </section>
+
+  <!-- The Website workflow builds the repository (see fdroid/README.md). -->
+  <section id="fdroid">
+    <h2>F-Droid</h2>
+    <p>Tap the button on the tablet to add the repository to F-Droid, Droid-ify or Neo Store.
+      Recipes then shows up in its app list, with updates.</p>
+    <p class="row">
+      <a class="btn" id="fdroid-link" href="#">Add to F-Droid</a>
+      <button type="button" class="btn plain" id="fdroid-qr">Show QR code</button>
+    </p>
+    <p class="muted">Repository: <code id="fdroid-url"></code><br>
+      Fingerprint: <code id="fdroid-fingerprint">9DC5F46A32C519C16590F7F685CE526D3C0301EA1D320D502CB92C29DA6E7ADA</code></p>
+  </section>
+
+  <section>
+    <h2>Just the APK</h2>
+    <!-- The Website workflow fills in the newest release. Obtainium finds the APK through this
+         link and reads the version from its name. -->
+    <p class="row">
+      <a class="btn plain" id="apk-link" href="recipes-v1.6.1.apk">Download Recipes v1.6.1</a>
+      <button type="button" class="btn plain" id="apk-qr">Show QR code</button>
+    </p>
+  </section>
+</main>
+
+<dialog id="qr"><div>
+  <h2 id="qr-title"></h2>
+  <svg id="qr-code" role="img" aria-labelledby="qr-title"><path fill="#000"></path></svg>
+  <p class="muted" id="qr-text"></p>
+  <button type="button" class="btn" id="qr-close">Close</button>
+</div></dialog>
+<script src="qrcode.js"></script>
+<script>
+  // The site's address depends on where it is served, so the link is made here.
+  (function () {
+    var app = {
+      id: "net.cloud64.recipes",
+      url: location.href.split("#")[0],
+      author: "Bram",
+      name: "Recipes",
+      additionalSettings: JSON.stringify({
+        customLinkFilterRegex: "recipes-v[0-9.]+\\.apk$",
+        versionExtractionRegEx: "recipes-(v[0-9.]+)\\.apk",
+        matchGroupToUse: "1",
+        versionDetection: true
+      }),
+      overrideSource: "HTML"
+    };
+    document.getElementById("obtainium-link").href = "obtainium://app/" + encodeURIComponent(JSON.stringify(app));
+  })();
+
+  // The F-Droid repository, with the fingerprint of the key that signs it.
+  var fdroid = (function () {
+    var fingerprint = document.getElementById("fdroid-fingerprint").textContent;
+    var repo = new URL("fdroid/repo", location.href.split("#")[0]).href;
+    document.getElementById("fdroid-url").textContent = repo;
+    document.getElementById("fdroid-link").href =
+      repo.replace(/^https:/, "fdroidrepos:").replace(/^http:/, "fdroidrepo:") + "?fingerprint=" + fingerprint;
+    return repo + "?fingerprint=" + fingerprint;
+  })();
+
+  // Show QR code: for opening this page, the F-Droid repository or the APK on the tablet from
+  // another screen. The Obtainium code opens this page rather than the obtainium:// link itself,
+  // because camera apps often won't open links that aren't web addresses.
+  (function () {
+    var dialog = document.getElementById("qr");
+    function show(title, text, link) {
+      var code = qrcode(0, "M");
+      code.addData(link, "Byte");
+      code.make();
+      var size = code.getModuleCount();
+      var squares = [];
+      for (var row = 0; row < size; row++) {
+        for (var col = 0; col < size; col++) {
+          if (code.isDark(row, col)) squares.push("M" + col + " " + row + "h1v1h-1z");
+        }
+      }
+      var svg = document.getElementById("qr-code");
+      // Four modules of white around the code, as scanners expect.
+      svg.setAttribute("viewBox", "-4 -4 " + (size + 8) + " " + (size + 8));
+      svg.firstElementChild.setAttribute("d", squares.join(""));
+      document.getElementById("qr-title").textContent = title;
+      document.getElementById("qr-text").textContent = text;
+      dialog.showModal();
+    }
+    document.getElementById("obtainium-qr").addEventListener("click", function () {
+      show("Add to Obtainium", "Scan it with the tablet's camera. This page opens there: tap Add to Obtainium.",
+        location.href.split("#")[0] + "#obtainium");
+    });
+    // F-Droid opens links to a repository, and its Add repository screen scans them too.
+    document.getElementById("fdroid-qr").addEventListener("click", function () {
+      show("Add to F-Droid", "Scan it with the tablet's camera, or in F-Droid under Settings → Repositories → +.",
+        fdroid);
+    });
+    document.getElementById("apk-qr").addEventListener("click", function () {
+      show("Download the APK", "Scan it with the tablet's camera to download the app.",
+        document.getElementById("apk-link").href);
+    });
+    document.getElementById("qr-close").addEventListener("click", function () { dialog.close(); });
+    // A tap outside the box closes it too; Escape already does.
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fdroid>
+	<repo icon="icon.png" name="Recipes" pubkey="308204ef308202d7a003020102020852466f8165aa6ef2300d06092a864886f70d01010c05003025312330210603550403131a5265636970657320462d44726f6964207265706f7369746f72793020170d3236313130343230303134395a180f32313236313031313230303134395a3025312330210603550403131a5265636970657320462d44726f6964207265706f7369746f727930820222300d06092a864886f70d01010105000382020f003082020a0282020100acd48a61986070f37ff36c718ff2c3903a5da1075ec0755e6cc5c4494a190bec9a4810968957df9e34b74b1a137819c2402d4d2b3401dd8bb632963e51af9d4e8d8eb4aeddbb5cfe1a2f2afd2e274ceea072db7cb9517ff1eae2ac5a180a6e251bc13a3a88cd6fe99f553edc30013793b8fac87d24963389374356970f9396764a5793d315923734c01f998e710a0292d0cb47cb1b967971cc49ff16e2e473ec30fc9b61987c8f6059909ac8e2498b1d256dc3b5b8cf7a984ed280127672688c9ce4f07aa8b119e1969e746bf646b5c7938f4ad8027c84d9d6e2cfb1139e3834cca8b1c5e8201fafc6504842a13630e86908131d863998a9a3d986a09b98216b0161ba3034126f78100d0829030e4a68ee278dae1b7f30d3190ea711e065fdbf2d92d57be72f1b044037295cbef8ecb77cdb3a6f723fe0faea66b8e60d0f85a251b6e4e9c19b5e5323aacc70b29d44e4f9142e2dece9e3d45860a71f81c85ab7e7f62ad4acc329ccaad0bea70e5742f6ed95d9e2f3df8033cea8eba08c1ebd46612f78c137b8dca72fa8fc78e9033a48f51fb86e9c4cc5e61ad8e808a85d3055b0297e3387082a4a439cd771df6bb66534d474e2e340f56e57aac46deb796a8007c3a1763faf0b5dedf5496ec7f057676e61530667ddb5278065fc6f915e3140a76cd5145b71e43e70ce6a714f4bdd2096cd66f30a6fe68914990280a9d4098f0203010001a321301f301d0603551d0e04160414e610cfef15f6ed9bb2333b3a1fc5ce6578651184300d06092a864886f70d01010c05000382020100284fdbe790ef36d165513693e64fc74a85b622981be030230c36bc1c013c7d9fb52707d4686cabe97bebd9ca9846e98178f421538265cc7c8390afea3f9e661c7c8b89a4709bb84e18fb8fbf846a9ff7b3c827562343de9ea26e81c37c8c6fd0f6fc6f70c8eff31f7ac9f8a20b832afb54784d663d7de68b06fa63d287463ada61251c0772d2f12958b13833c0db8c9a5fac1f56b8385b18e0b93919d0ab09ee7755c05cc0953db3a3030e77fac2b1f78305b81470dac50d26bcff23202b68f9d426a91c30eb0de4275987fc55a39f815eef8d297681ba00abc72452a3a0561a75761dd34d7a0b10d20f9cc7d13e0c1e55103897e24cfce0d8dea15e3065b04851936c7355b809e4c6f8a9b3cae3b830ea86c2d30afd88a771d150ae06693376ed7c5ab917ca9927eb1dd2827e29ff4d41e8cb7b04daf8c54e2a354008016290589d60bf12ba903163e1373cb4924438d23a4eb3fbc52f49c6a576c561fd4c6021e60ce28a7c6fbe0972d5deffebe5aecac080c14ee742fe667ed7eb29cbafc71dd4a106b863f6ec20fdc2eb57cd8cb26b72785bd23a722ab28d521ab912f1e572d4d7722748123eaa3cb4ff2cb627da758f25fcfea7a6d5f0388db6f630b520afc0e6b69a5dca62018aea78105f0dea7a982b09572fb87e35831f76e402dd816a79c5c08a272abeb8926a0dfa17838203ff3179d8ed9289384eaafdc18290c2" timestamp="1794656340" url="https://brnl-claude.github.io/interactive-recipe-reader-releases/fdroid/repo" version="20002">
+		<description>The Android app for the Interactive Recipe Reader.</description>
+	</repo>
+	<application id="net.cloud64.recipes">
+		<id>net.cloud64.recipes</id>
+		<added>2026-11-14</added>
+		<lastupdated>2026-11-14</lastupdated>
+		<name>Recipes</name>
+		<summary>Cook from clear steps with timers, from the Interactive Recipe Reader</summary>
+		<desc>The Android app for the Interactive Recipe Reader, which turns recipes into clear steps with
+the ingredients highlighted and a timer for each step.
+
+* Opens recipe links from other apps and the browser
+* Scans invite and login QR codes
+* Adds scheduled recipes to the calendar
+* Keeps the screen on while you cook
+
+The app shows the reader's server, so new features mostly arrive without an update.</desc>
+		<license>Proprietary</license>
+		<categories>Reading</categories>
+		<category>Reading</category>
+		<web></web>
+		<source>https://github.com/brnl-claude/interactive-recipe-reader</source>
+		<tracker></tracker>
+		<author>Bram</author>
+		<marketversion></marketversion>
+		<marketvercode>42</marketvercode>
+		<package>
+			<version>v1.6.1</version>
+			<versioncode>42</versioncode>
+			<apkname>recipes-v1.6.1.apk</apkname>
+			<hash type="sha256">fe3a8c0155870b675644ee4f0972f5a9731ab11d761e75d02533519589b4a5cb</hash>
+			<size>880220</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-11-14</added>
+			<sig>9fce316eb20e0a60563032a3cc9df9d1</sig>
+			<permissions>ACCESS_NETWORK_STATE,CAMERA,INTERNET,MODIFY_AUDIO_SETTINGS,RECORD_AUDIO,net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+		<package>
+			<version>v1.6.0</version>
+			<versioncode>39</versioncode>
+			<apkname>recipes-v1.6.0.apk</apkname>
+			<hash type="sha256">1cba689dee00e20325f879c59aefd6bcd4d6a011b20194aec245d906feef3ea0</hash>
+			<size>880184</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-11-14</added>
+			<sig>9fce316eb20e0a60563032a3cc9df9d1</sig>
+			<permissions>ACCESS_NETWORK_STATE,CAMERA,INTERNET,RECORD_AUDIO,net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+		<package>
+			<version>v1.5.0</version>
+			<versioncode>36</versioncode>
+			<apkname>recipes-v1.5.0.apk</apkname>
+			<hash type="sha256">c1e8819dce05b7d2cc055368163963745157031e545280127b6907af3f11ec40</hash>
+			<size>879856</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-11-14</added>
+			<sig>9fce316eb20e0a60563032a3cc9df9d1</sig>
+			<permissions>ACCESS_NETWORK_STATE,CAMERA,INTERNET,net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+	</application>
+</fdroid>

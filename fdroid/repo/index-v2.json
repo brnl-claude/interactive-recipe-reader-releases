@@ -1,0 +1,166 @@
+{
+  "repo": {
+    "name": {
+      "en-US": "Recipes"
+    },
+    "description": {
+      "en-US": "The Android app for the Interactive Recipe Reader."
+    },
+    "icon": {
+      "en-US": {
+        "name": "/icons/icon.png",
+        "sha256": "942d7b691e145df304eb425acd777d32d5691c12f79b751472103ebb698512d4",
+        "size": 11469
+      }
+    },
+    "address": "https://brnl-claude.github.io/interactive-recipe-reader-releases/fdroid/repo",
+    "timestamp": 1794656340000,
+    "categories": {
+      "Reading": {
+        "name": {
+          "en-US": "Reading"
+        }
+      }
+    }
+  },
+  "packages": {
+    "net.cloud64.recipes": {
+      "metadata": {
+        "added": 1794656340000,
+        "categories": [
+          "Reading"
+        ],
+        "lastUpdated": 1794656340000,
+        "license": "Proprietary",
+        "sourceCode": "https://github.com/brnl-claude/interactive-recipe-reader",
+        "authorName": "Bram",
+        "name": {
+          "en-US": "Recipes"
+        },
+        "summary": {
+          "en-US": "Cook from clear steps with timers, from the Interactive Recipe Reader"
+        },
+        "description": {
+          "en-US": "The Android app for the Interactive Recipe Reader, which turns recipes into clear steps with\nthe ingredients highlighted and a timer for each step.\n\n* Opens recipe links from other apps and the browser\n* Scans invite and login QR codes\n* Adds scheduled recipes to the calendar\n* Keeps the screen on while you cook\n\nThe app shows the reader's server, so new features mostly arrive without an update."
+        },
+        "preferredSigner": "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da"
+      },
+      "versions": {
+        "fe3a8c0155870b675644ee4f0972f5a9731ab11d761e75d02533519589b4a5cb": {
+          "added": 1794656340000,
+          "file": {
+            "name": "/recipes-v1.6.1.apk",
+            "sha256": "fe3a8c0155870b675644ee4f0972f5a9731ab11d761e75d02533519589b4a5cb",
+            "size": 880220
+          },
+          "manifest": {
+            "versionName": "v1.6.1",
+            "versionCode": 42,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "android.permission.RECORD_AUDIO"
+              },
+              {
+                "name": "android.permission.MODIFY_AUDIO_SETTINGS"
+              },
+              {
+                "name": "net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "1cba689dee00e20325f879c59aefd6bcd4d6a011b20194aec245d906feef3ea0": {
+          "added": 1794656340000,
+          "file": {
+            "name": "/recipes-v1.6.0.apk",
+            "sha256": "1cba689dee00e20325f879c59aefd6bcd4d6a011b20194aec245d906feef3ea0",
+            "size": 880184
+          },
+          "manifest": {
+            "versionName": "v1.6.0",
+            "versionCode": 39,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "android.permission.RECORD_AUDIO"
+              },
+              {
+                "name": "net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "c1e8819dce05b7d2cc055368163963745157031e545280127b6907af3f11ec40": {
+          "added": 1794656340000,
+          "file": {
+            "name": "/recipes-v1.5.0.apk",
+            "sha256": "c1e8819dce05b7d2cc055368163963745157031e545280127b6907af3f11ec40",
+            "size": 879856
+          },
+          "manifest": {
+            "versionName": "v1.5.0",
+            "versionCode": 36,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "03458ea1d229c7220a9aae8a820c35eb7737c9646e437c0d4be95dfe2d45d0da"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.CAMERA"
+              },
+              {
+                "name": "net.cloud64.recipes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
